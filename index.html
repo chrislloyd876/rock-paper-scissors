@@ -6,13 +6,64 @@
     </head>
     <body>
         <script>
-            console.log("ROck");
+            // get computer choice for game
             function getComputerChoice() {
                 const choices = ["Rock","Paper","Scissors"];
                 let choice = choices[Math.floor(Math.random()*choices.length)];
                 return choice;
             };
-            console.log(getComputerChoice());
+            
+            // get player choice for game
+            playerSelection = prompt("Enter Rock, Paper or Scissors");
+            computerSelection = getComputerChoice();
+
+            // play one round of game
+            function playRound(playerSelection, computerSelection){
+                console.log(playerSelection);
+                console.log(computerSelection);
+                let result = " ";
+                // if player chooses rock
+                if(playerSelection == "rock"){
+                    if(computerSelection =="Paper"){
+                        result = "You Lose! Paper beats Rock!";
+                    }
+                    else if(computerSelection == "Scissors"){
+                        result = "You win! Rock beats Paper!";
+                    }
+                    else{
+                        result = "Rock and rock is a draw! Try again.";
+                    }
+                }
+                //if player chooses paper
+                if(playerSelection == "paper"){
+                    if(computerSelection =="Rock"){
+                        result = "You Win! Paper beats Rock!";
+                    }
+                    else if(computerSelection == "Scissors"){
+                        result = "You lose! Scissors beats Paper!";
+                    }
+                    else{
+                        result = "Paper and Paper is a draw! Try again.";
+                    }
+                }
+                // if player chooses scissors
+                if(playerSelection == "scissors"){
+                    if(computerSelection =="Rock"){
+                        result = "You Lose! Rock beats Scissors!";
+                    }
+                    else if(computerSelection == "Paper"){
+                        result = "You win! Scissors beats Paper!";
+                    }
+                    else{
+                        result = "Scissors and Scissors is a draw! Try again.";
+                    }
+                }
+                
+                return result;
+            }
+
+            //playing game
+            console.log(playRound(playerSelection.toLowerCase(),computerSelection));
         </script>
     </body>
 </html>
