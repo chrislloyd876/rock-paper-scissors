@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Rock Paper Scissors</title>
+        <script src = "javaScript.js" defer></script>
     </head>
     <body>
         <script>
@@ -27,7 +28,7 @@
             // play one round of game
             function playRound(playerSelection, computerSelection){
 
-                playerSelection = prompt("Enter Rock, Paper or Scissors").toLowerCase();
+                playerSelection = playerSelection.toLowerCase();
                 computerSelection = getComputerChoice();
 
                 console.log("Player: " + playerSelection);
@@ -55,9 +56,7 @@
                 
                 return result;
             }
-            //playing one round
-            //console.log(playRound(playerSelection, "computerSelection"));
-
+            
             //getting scores
             function getScore(result){
                 if (result === playerWin){
@@ -74,38 +73,22 @@
                 console.log("Draws: " + drawScore);
             }
 
-
-            //full game
-            function game(){
-                play = playRound(playerSelection.toLowerCase(), computerSelection);
-                console.log(play);
-                getScore(play);
-                play = playRound(playerSelection.toLowerCase(), computerSelection);
-                console.log(play);
-                getScore(play);
-                play = playRound(playerSelection.toLowerCase(), computerSelection);
-                console.log(play);
-                getScore(play);
-                play = playRound(playerSelection.toLowerCase(), computerSelection);
-                console.log(play);
-                getScore(play);
-                play = playRound(playerSelection.toLowerCase(), computerSelection);
-                console.log(play);
-                getScore(play);
-                
-                //end of game results 
-                if(playerScore > computerScore){
-                    console.log("Congratulations! You won!");
-                }
-                else if(computerScore > playerScore){
-                    console.log("You lose! :( Better luck next time.");
-                }
-                else{
-                    console.log("The game is a draw!");
-                }
-            }
-            // running full game
-            game();
+            //     //end of game results 
+            //     if(playerScore > computerScore){
+            //         console.log("Congratulations! You won!");
+            //     }
+            //     else if(computerScore > playerScore){
+            //         console.log("You lose! :( Better luck next time.");
+            //     }
+            //     else{
+            //         console.log("The game is a draw!");
+            //     }
+            // }
+            // // running full game
+            // game();
         </script>
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
     </body>
 </html>
