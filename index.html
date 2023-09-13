@@ -31,8 +31,6 @@
                 playerSelection = playerSelection.toLowerCase();
                 computerSelection = getComputerChoice();
 
-                console.log("Player: " + playerSelection);
-                console.log("Computer: " + computerSelection);
                 let result = " ";
                 // if selection is the same
                 if(playerSelection == computerSelection){
@@ -68,27 +66,12 @@
                 else{
                     drawScore++;
                 }
-                console.log("player score: " + playerScore);
-                console.log("computer score: " + computerScore);
-                console.log("Draws: " + drawScore);
             }
-
-            //     //end of game results 
-            //     if(playerScore > computerScore){
-            //         console.log("Congratulations! You won!");
-            //     }
-            //     else if(computerScore > playerScore){
-            //         console.log("You lose! :( Better luck next time.");
-            //     }
-            //     else{
-            //         console.log("The game is a draw!");
-            //     }
-            // }
-            // // running full game
-            // game();
         </script>
         <button id="rock">Rock</button>
         <button id="paper">Paper</button>
         <button id="scissors">Scissors</button>
+
+        <div id="container"></div>
     </body>
 </html>
